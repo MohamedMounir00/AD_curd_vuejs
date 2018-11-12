@@ -14017,7 +14017,6 @@ var Deletepost = Vue.component('Deletepost', __webpack_require__(54));
 var Viewpost = Vue.component('Viewpost', __webpack_require__(57));
 
 Vue.use(VueRouter, VueAxios, axios);
-var url = window.location.href;
 
 var routes = [{
   name: 'Listposts',
@@ -50354,7 +50353,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     createPost: function createPost() {
       var _this = this;
 
-      Axios.post('http://127.0.0.1:8000/posts/', this.post).then(function (res) {
+      Axios.post('/posts/', this.post).then(function (res) {
         _this.$router.push({ name: 'Listposts' });
       });
     }

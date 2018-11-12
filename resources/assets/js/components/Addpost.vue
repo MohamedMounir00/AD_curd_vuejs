@@ -25,7 +25,7 @@
     },
     methods:{
       createPost:function(){
-        Axios.post('http://127.0.0.1:8000/posts/',this.post).then((res)=>{
+        Axios.post('/posts/',this.post).then((res)=>{
           this.$router.push({name:'Listposts'})
         })
       }
